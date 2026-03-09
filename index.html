@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统登录</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f0f0;
+        }
+        #login {
+            text-align: center;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        h2 { color: #333; margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; color: #555; font-size: 14px; text-align: left; }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1a89e0;
+            color: white;
+            border: 1px solid #1a89e0;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div id="login">
+        <h2>系统登录</h2>
+        <form onsubmit="return false;">
+            <label>用户名</label>
+            <input type="text" id="username" placeholder="请输入用户名">
+
+            <label>密码</label>
+            <input type="password" id="password" placeholder="请输入密码">
+
+            <button onclick="checkPassword()" type="button">登录</button>
+        </form>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var pass = document.getElementById('password').value;
+
+            if (pass.trim() !== "") {
+                alert('登录成功！正在加载资源...');
+            } else {
+                alert('请输入密码！');
+            }
+        }
+    </script>
+
+</body>
+
+<a href="https://www.bilibili.com" target="_self" style="font-size: 16px; color: #1a89e0; text-decoration: none;">
+              注册
+
+
+    </a>
+
+
+</html>
